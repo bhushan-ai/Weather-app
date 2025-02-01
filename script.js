@@ -4,14 +4,24 @@ const whetherDataEle= document.querySelector(".whether-data")
 const cityNameEle=document.querySelector("#city-name")
 const formEle=document.querySelector("form")
 const imgIcon=document.querySelector(".icon")
+const buttonEle = document.querySelector("button");
 
-formEle.addEventListener("submit",(e)=>{
-    e.preventDefault()
-    // console.log(cityNameEle.value)
-    const cityValue= cityNameEle.value
+// formEle.addEventListener("submit",(e)=>{
+//     e.preventDefault()
+//     // console.log(cityNameEle.value)
+//     const cityValue= cityNameEle.value
 
-    getWhetherData(cityValue)
-})
+//     getWhetherData(cityValue)
+// })
+
+buttonEle.addEventListener("click,submit", (e) => {
+  e.preventDefault();
+  // console.log(cityNameEle.value)
+  const cityValue = cityNameEle.value;
+
+  getWhetherData(cityValue);
+});
+
    async function getWhetherData(cityValue){
 
     const response= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${ apiKey}&units=metric`)
@@ -21,7 +31,7 @@ formEle.addEventListener("submit",(e)=>{
             
         }
       const data=await response.json();
-    //    console.log(data);
+      //  console.log(data);
     
        const tempreture= Math.floor(data.main.temp);
        const description=data.weather[0].description;
