@@ -14,7 +14,7 @@ const buttonEle = document.querySelector("button");
 //     getWhetherData(cityValue)
 // })
 
-buttonEle.addEventListener("click,submit", (e) => {
+buttonEle.addEventListener("click", (e) => {
   e.preventDefault();
   // console.log(cityNameEle.value)
   const cityValue = cityNameEle.value;
