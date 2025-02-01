@@ -7,8 +7,16 @@
   }
   
   body{
-    background-color:honeydew;
-  background-size: cover;
+    background:linear-gradient(to right, skyblue,white );
+   /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3zcFoMu1q29D_7gxqsIM5ixUH-KkHa0GJA&s");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size:auto ; */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
   }
   .container{
       background-color: rgb(9, 72, 94);
@@ -19,7 +27,7 @@
       box-shadow: 10px 10px 20px rgba(0, 0,0, 0.6);
       margin: 20px auto;
       margin-top: 40px;
-      border-radius: 10px;
+      border-radius: 15px;
   }
   form{
       display: flex;
@@ -30,24 +38,24 @@
   form input[type="text"]{
       padding: 10px;
       border: none;
-      width: 70%;
+      width: 100%;
       font-size: 18px;
       outline:none;
-      border-radius: 5px;
-  
+      border-radius: 15px;
+    
   }
-  form input[type="submit"]{
+  .submit1{
     padding: 10px 20px;
     border: none;
-    background-color: rgb(16, 78, 172);
+    background-color: rgb(115, 195, 224);
     color: white;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
   }
-  form input[type="submit"]:hover{
-         background-color: rgb(6, 21, 66);
+ .submit1:hover{
+         background-color:  rgb(26, 121, 155);
   }
   
   
@@ -81,10 +89,28 @@
       font-size: 18px;
       background-color: white;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 15px;
       margin: 10px;
       min-height: 40px;
       text-align: center;
       align-items: center;
       flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .container{
+        max-width: 310px;
+    }
+   form input[type ="text"]{
+    width: 100%;
+   }
+   .submit1{
+    padding: 5px 10px;
+   background-color:  rgb(26, 121, 155);
+   }
+   .container{
+    margin:auto;
+    margin-top: 1%;
+   }
+
   }
